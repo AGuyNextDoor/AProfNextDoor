@@ -13,17 +13,26 @@ Pour cela, plusieurs étapes sont à suivre :
 
 1. Importer le jeu de données et l’explorer.
 
-   - Votre notebook doit contenir des analyses statistiques, des graphiques, et/ou description de votre jeu de données.
+   - Votre notebook doit contenir une rapide analyses du jeu de donnees.
+   - Le dataset `train.csv` et `data_to_predict_and_submit.csv` sont nettoyés et pret a etre implémentés.
 
-2. Il faut diviser votre jeu de données en un set d'entraînement et un set de test. Le set de test doit représenter 10% de votre donnée totale.
+2. Il faut diviser votre jeu de données en un _set d'entraînement_ et un _set de test_. Le set de test doit représenter 10% de votre donnée totale.
 
    - Votre set de test ne doit pas contenir le prix final de la maison lors de l'évaluation.
 
-3. Entraîner un modèle de régression linéaire de sklearn `linear_model` sur votre donnée d'entraînement.
+3. Entraîner plusieurs modèles de regression lineaire de la librairie `sklearn` :
 
-4. Prédire des prix de maison avec votre modèle sur vos données de test.
+   1. un modèle de régression linéaire classique `linear_model`.
+   2. un modèle de régression linéaire classique `lasso`.
+   3. un modèle de régression linéaire classique `elastic net`.
+
+4. Prédire des prix de maison pour chaque modèles sur vos données de test.
 
 5. Évaluer et analyser vos résultats à l’aide des vrais prix des maisons.
+
+   - L'evaluation doit comparer la performance de vos trois modèles.
+   - Si des parametres sont disponibles pour certains modèles, comparer les performances du modèles pour plusieurs valeurs de ces parametres.
+   - Plusieurs metriques d'evaluations et comportements doivent etre utilisés (overfitting, underfitting, mesure, ...)
 
 6. Proposer des suggestions d'améliorations.
 
@@ -40,7 +49,7 @@ Vous devez envoyer par mail un dossier zip contenant :
 
 1. Votre notebook jupyter complet contenant toutes les étapes des **specs**.
 2. un fichier `submit.csv` contenant vos prédiction pour les données du fichier `data_to_predict_and_submit.csv` .
-   - Le format de ce fichier doit respecter le format du fichier sample_submission.csv.
+   - Le format de ce fichier doit respecter le format du fichier `sample_submission.csv`.
 
 L’envois du mail doit se faire a l’adresse mail suivante :
 
@@ -52,9 +61,9 @@ L’envois du mail doit se faire a l’adresse mail suivante :
 
 - https://drive.google.com/drive/folders/1NKANenuBPaX508mFuQ0C50MrUwbAEnTo?usp=sharing
 
-2. Régression linéaire `sklearn` (Documentation)
+2. Importer des CSV dans **google collab**
 
-- http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+- https://towardsdatascience.com/3-ways-to-load-csv-files-into-colab-7c14fcbdcb92
 
 3. How to export CSV with Pandas
 
