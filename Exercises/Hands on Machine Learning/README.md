@@ -40,7 +40,7 @@ Une fois ces étapes finies et votre modèle prêt, vous devez importer le fichi
 
 1. Utilisez votre modèle pour prédire le prix de ces maisons.
 2. Exportez ces prédictions dans un fichier csv intitulé `submit.csv` qui contient deux colonnes : `[Id, SalePrice]`
-   - Vous pouvez vous inspirez du fichier `sample_submission.csv` qui vous montre le format de donnée du fichier à soumettre.
+   - Vous pouvez vous inspirer du fichier `sample_submission.csv` qui vous montre le format de donnée du fichier à soumettre.
    - La colonne `SalePrice` doit contenir les prédictions de votre modèle.
 
 ## Résultat à soumettre
