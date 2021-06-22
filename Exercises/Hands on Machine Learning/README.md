@@ -14,7 +14,7 @@ Pour cela, plusieurs étapes sont à suivre :
 1. Importer le jeu de données et l’explorer.
 
    - Votre notebook doit contenir une rapide analyses du jeu de donnees.
-   - Le dataset `train.csv` et `data_to_predict_and_submit.csv` sont nettoyés et pret a etre implémentés.
+   - Le dataset `dataset.csv` et `data_to_predict_and_submit.csv` sont nettoyés et pret a etre implémentés.
 
 2. Il faut diviser votre jeu de données en un _set d'entraînement_ et un _set de test_. Le set de test doit représenter 10% de votre donnée totale.
 
