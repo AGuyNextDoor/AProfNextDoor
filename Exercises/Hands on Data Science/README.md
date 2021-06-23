@@ -4,14 +4,14 @@
 
 Le but de l’exercice est de faire une implémentation et exploration d'un set de donnée.
 Le dataset contient des informations sur les passagers du titanic. L'hypothèse est de prédire si un passager survivra ou non à la catastrophe.
-Une implémentation d'un modèle de forêt aléatoire `RandomForestClassifier` est déjà préparé et vous devez améliorer les performances de votre modèles en analysant, corrigeant et modifiant les données présente dans le fichier `train.csv`.
+Une implémentation d'un modèle de forêt aléatoire `RandomForestClassifier` est déjà préparé et vous devez améliorer les performances de votre modèles en analysant, corrigeant et modifiant les données présente dans le fichier `dataset.csv`.
 ## Specs
 
 Pour cela, plusieurs étapes sont à suivre :
 
 1. Importer le jeu de données.
 
-   - Le dataset `train.csv` et `data_to_predict_and_submit.csv` doivent être importé.
+   - Le dataset `dataset.csv` et `data_to_predict_and_submit.csv` doivent être importé.
 
 2. L'exploration et analyse de données
 
