@@ -4,50 +4,67 @@
 
 Le but de l’exercice est de faire votre première implémentation d’un modèle de Machine Learning en utilisant un modèle de régression linéaire disponible dans la librairie de `sklearn`.
 
-Pour cela, un jeu de données est disponible contenant des description détaillée de maisons ainsi que leurs prix de ventes.
-Votre hypothèse est de prédire le prix d’une maison grâce à une régression linéaire.
+Pour cela, un jeu de données est disponible contenant des descriptions détaillées de maisons ainsi que leurs prix de ventes.
+Votre hypothèse est de prédire le prix de vente d’une maison grâce à une régression linéaire.
 
 ## Specs
 
-Pour cela, plusieurs étapes sont à suivre :
+Plusieurs étapes sont à suivre :
 
 1. Importer le jeu de données et l’explorer.
 
-   - Votre notebook doit contenir une rapide analyses du jeu de donnees.
+   - Votre notebook doit contenir une rapide analyses du jeu de données.
    - Le dataset `dataset.csv` et `data_to_predict_and_submit.csv` sont nettoyés et pret a etre implémentés.
 
-2. Il faut diviser votre jeu de données en un _set d'entraînement_ et un _set de test_. Le set de test doit représenter 10% de votre donnée totale.
+2. Il faut diviser votre jeu de données en un _set d'entraînement_ et un _set de test_.
 
-   - Votre set de test ne doit pas contenir le prix final de la maison lors de l'évaluation.
+   - Le _set de test_ doit représenter 10% de votre dataset.
+   - Une fois que vous avez les deux sets d'entrainement et de test, il faut retirer la colonne des prix `SalePrice` qui est l'output que l'on veut prédire.
 
-3. Entraîner plusieurs modèles de regression lineaire de la librairie `sklearn` :
+   - A la fin vous devez avoir 4 dataframes :
+       1. `data_train_x` : qui contient toutes les valeurs d'entrainements sans le prix des maisons;
+       2. `data_train_y` : qui contient les prix de toutes les valeurs d'entrainements;
+       3. `data_test_x` : qui contient toutes les valeurs de tests sans le prix des maisons;
+       4. `data_test_y` : qui contient les prix de toutes les valeurs de tests;
 
-   1. un modèle de régression linéaire classique `linear_model`.
-   2. un modèle de régression linéaire classique `lasso`.
-   3. un modèle de régression linéaire classique `elastic_net`.
+3. Il faut entraîner plusieurs modèles de régression linéaire de la librairie `sklearn` :
 
-4. Prédire des prix de maison pour chaque modèles sur vos données de test.
+   1. un modèle de régression linéaire classique `linearRegression`.
+      - [scikit linearRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html)
+   2. un modèle de régression linéaire classique `Lasso`.
+      - [scikit Lasso](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html)
+   3. un modèle de régression linéaire classique `ElasticNet`.
+      - [scikit ElasticNet](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html)
 
-5. Évaluer et analyser vos résultats à l’aide des vrais prix des maisons.
+   - Pour chaque implémentation, il faut tester plusieurs paramétrages de vos modèles, si il y en de disponible.
+  
+4. Évaluer et analyser les performances de chacun de vos modèles.
 
-   - L'evaluation doit comparer la performance de vos trois modèles.
+   - Prédire les prix de maison sur vos données de test
+   - Évaluer la performance de ces prédictions.
+
+Note :
+
+   - L'évaluation doit comparer la performance de vos trois modèles.
    - Si des parametres sont disponibles pour certains modèles, comparer les performances du modèles pour plusieurs valeurs de ces parametres.
-   - Plusieurs metriques d'evaluations et comportements doivent etre utilisés (overfitting, underfitting, mesure, ...)
+   - Plusieurs métriques d'évaluations et comportements doivent être utilisés (overfitting, underfitting, mesure, ...)
+     - [Quelques méthodes à la section 'Regression'](https://scikit-learn.org/stable/modules/model_evaluation.html)
 
-6. Proposer des suggestions d'améliorations.
+5. Proposer des suggestions d'améliorations.
 
 Une fois ces étapes finies et votre modèle prêt, vous devez importer le fichier `data_to_predict_and_submit.csv` qui contient des nouvelles données de maison mais sans leurs prix de ventes.
 
 1. Utilisez votre modèle pour prédire le prix de ces maisons.
 2. Exportez ces prédictions dans un fichier csv intitulé `submit.csv` qui contient deux colonnes : `[Id, SalePrice]`
    - Vous pouvez vous inspirer du fichier `sample_submission.csv` qui vous montre le format de donnée du fichier à soumettre.
-   - La colonne `SalePrice` doit contenir les prédictions de votre modèle.
+   - La colonne `SalePrice` doit contenir les prédictions de votre modèle le plus performant.
 
 ## Résultat à soumettre
 
 Vous devez envoyer par mail un dossier zip contenant :
 
 1. Votre notebook jupyter complet contenant toutes les étapes des **specs**.
+   - Un maximum de textes et de commentaires présent sur votre notebook permettent d'expliquer chaque cellule de code, votre intention et votre interpretation.
 2. un fichier `submit.csv` contenant vos prédiction pour les données du fichier `data_to_predict_and_submit.csv` .
    - Le format de ce fichier doit respecter le format du fichier `sample_submission.csv`.
 
