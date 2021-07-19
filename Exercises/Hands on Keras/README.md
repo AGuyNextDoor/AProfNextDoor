@@ -1,4 +1,4 @@
-# Consigne : HandsOn Keras
+# Consigne : Hands On Keras
 
 ## Description
 
@@ -18,7 +18,7 @@ Plusieurs étapes sont à suivre :
 
 2. Importer les librairies nécéssaires :
 
-   - VOici une liste minimal de librairies a importer pour réaliser l'exercice :
+   - Voici une liste minimal de librairies a importer pour réaliser l'exercice :
      - `matplotlib`
      - `numpy`
      - `pandas`
